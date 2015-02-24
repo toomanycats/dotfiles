@@ -28,6 +28,7 @@ set foldmethod=indent
 set foldlevel=99
 :setlocal foldmethod=indent
 
+set background=dark
 set tabstop=4
 set expandtab
 set shiftwidth=4
@@ -43,7 +44,7 @@ nnoremap <leader>n :NERDTree<CR>
 :imap fj <Esc>
 "nmap <CR> o<Esc> " add new line and move back up one 
 
-colorscheme bensday
+colorscheme jellybeans 
 " rainbow parens
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
