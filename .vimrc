@@ -20,6 +20,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'tmhedberg/SimpylFold'
 Bundle 'scrooloose/syntastic'
 Bundle 'kien/rainbow_parentheses.vim'
+"Bundle 'davidhalter/jedi-vim'
 call vundle#end()            " required
 
 filetype plugin indent on    " required
@@ -50,7 +51,14 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
-"
+
+" Jedi options
+"let g:jedi#goto_assignments_command = "<leader>g"
+"let g:jedi#goto_definitions_command = "<leader>d"
+"let g:jedi#documentation_command = "K"
+""let g:jedi#usages_command = "<leader>n"
+"let g:jedi#completions_command = "<C-Space>"
+"let g:jedi#rename_command = "<leader>r"
 "
 " Brief help
 " :PluginList       - lists configured plugins
