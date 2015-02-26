@@ -54,8 +54,8 @@ au Syntax * RainbowParenthesesLoadBraces
 
 
 " comment out set_trace()
-nmap ct  :g/pdb.set_trace()/norm I#<CR>
-nmap uct :g/#pdb.set_trace()/norm 0d<space><CR>
+nmap ct  :g/^pdb.set_trace()/norm I#<CR>
+nmap uct :g/^#pdb.set_trace()/norm 0d<space><CR>
 
 " Jedi options
 "let g:jedi#goto_assignments_command = "<leader>g"
