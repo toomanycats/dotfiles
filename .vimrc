@@ -1,16 +1,17 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible               "be iMproved, required
+filetype off                   "required
 
-" set the runtime path to include Vundle and initialize
+"set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 
 
-" let Vundle manage Vundle, required
+"let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" Keep Plugin commands between vundle#begin/end.
+"Keep Plugin commands between vundle#begin/end.
+Bundle 'nanotech/jellybeans.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'flazz/vim-colorschemes'
 "Bundle 'Valloric/YouCompleteMe'
@@ -21,14 +22,14 @@ Bundle 'tmhedberg/SimpylFold'
 Bundle 'scrooloose/syntastic'
 Bundle 'kien/rainbow_parentheses.vim'
 "Bundle 'davidhalter/jedi-vim'
-call vundle#end()            " required
+call vundle#end()             "required
 
-filetype plugin indent on    " required
+filetype plugin indent on     "required
 syntax enable
 set foldmethod=indent
 set foldlevel=99
-:setlocal foldmethod=indent
-
+setlocal foldmethod=indent
+set t_Co=1024
 set background=dark
 set tabstop=4
 set expandtab
@@ -42,10 +43,9 @@ set nojoinspaces
 set smarttab
 
 nnoremap <leader>n :NERDTree<CR>
-:imap fj <Esc>
-"nmap <CR> o<Esc> " add new line and move back up one 
+"nmap <CR> o<Esc>  add new line and move back up one 
 
-colorscheme jellybeans 
+"colorscheme jellybeans 
 " rainbow parens
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
@@ -53,19 +53,19 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
 " Jedi options
-"let g:jedi#goto_assignments_command = "<leader>g"
-"let g:jedi#goto_definitions_command = "<leader>d"
-"let g:jedi#documentation_command = "K"
-""let g:jedi#usages_command = "<leader>n"
-"let g:jedi#completions_command = "<C-Space>"
-"let g:jedi#rename_command = "<leader>r"
-"
+"let g:jedi#goto_assignments_command = <leader>g
+"let g:jedi#goto_definitions_command = <leader>d
+"let g:jedi#documentation_command = K
+"let g:jedi#usages_command = <leader>n
+"let g:jedi#completions_command = <C-Space>
+"let g:jedi#rename_command = <leader>r
+
 " Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
+
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
