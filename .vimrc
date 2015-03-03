@@ -11,17 +11,18 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 "Keep Plugin commands between vundle#begin/end.
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'flazz/vim-colorschemes'
-"Bundle 'Valloric/YouCompleteMe'
-Bundle 'fs111/pydoc.vim'
-Bundle 'hdima/python-syntax'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tmhedberg/SimpylFold'
-Bundle 'scrooloose/syntastic'
-Bundle 'kien/rainbow_parentheses.vim'
-"Bundle 'davidhalter/jedi-vim'
+Plugin 'bling/vim-airline'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'flazz/vim-colorschemes'
+"Plugin 'Valloric/YouCompleteMe'
+Plugin 'fs111/pydoc.vim'
+Plugin 'hdima/python-syntax'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'scrooloose/syntastic'
+Plugin 'kien/rainbow_parentheses.vim'
+"Plugin 'davidhalter/jedi-vim'
 call vundle#end()             "required
 
 filetype plugin indent on     "required
@@ -43,8 +44,6 @@ set nojoinspaces
 set smarttab
 set colorcolumn=80
 set laststatus=2 " always show status line
-set statusline="File:"%f
-set ruler
 nnoremap <leader>n :NERDTree<CR>
 "nmap <CR> o<Esc>  add new line and move back up one 
 
