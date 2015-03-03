@@ -21,7 +21,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'tmhedberg/SimpylFold'
 Bundle 'scrooloose/syntastic'
 Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'davidhalter/jedi-vim'
+"Bundle 'davidhalter/jedi-vim'
 call vundle#end()             "required
 
 filetype plugin indent on     "required
