@@ -21,7 +21,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'tmhedberg/SimpylFold'
 Bundle 'scrooloose/syntastic'
 Bundle 'kien/rainbow_parentheses.vim'
-"Bundle 'davidhalter/jedi-vim'
+Bundle 'davidhalter/jedi-vim'
 call vundle#end()             "required
 
 filetype plugin indent on     "required
@@ -41,7 +41,10 @@ set hlsearch
 set mouse=a
 set nojoinspaces
 set smarttab
-
+set colorcolumn=80
+set laststatus=2 " always show status line
+set statusline="File:"%f
+set ruler
 nnoremap <leader>n :NERDTree<CR>
 "nmap <CR> o<Esc>  add new line and move back up one 
 
@@ -61,7 +64,7 @@ nmap uct :g/^#pdb.set_trace()/norm 0d<space><CR>
 "let g:jedi#goto_assignments_command = <leader>g
 "let g:jedi#goto_definitions_command = <leader>d
 "let g:jedi#documentation_command = K
-"let g:jedi#usages_command = <leader>n
+"let g:jedi#usages_command = <leader>u
 "let g:jedi#completions_command = <C-Space>
 "let g:jedi#rename_command = <leader>r
 
