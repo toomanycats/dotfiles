@@ -2,8 +2,6 @@ xterm*Background: black
 xterm*Foreground: green
 xterm*CursorColor: LightBlue
 xterm*Geometry: 100x100
-xterm*Font:Monaco
-xterm*Fontsize:10
 
 Xft.dpi: 99
 
