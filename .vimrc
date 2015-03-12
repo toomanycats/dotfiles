@@ -45,9 +45,9 @@ set smarttab
 set colorcolumn=80
 set laststatus=2 " always show status line
 nnoremap <leader>n :NERDTree<CR>
-"nmap <CR> o<Esc>  add new line and move back up one 
+"nmap <CR> o<Esc>  add new line and move back up one
 
-"colorscheme jellybeans 
+"colorscheme jellybeans
 " rainbow parens
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
@@ -59,13 +59,13 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-" remove trailing white space after :w
-autocmd BufWritePre * :%s/\s\+$//e
-
 let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
+
+" remove trailing white space after :w
+autocmd BufWritePre * :%s/\s\+$//e
 
 " comment out set_trace()
 nmap ct  :g/^pdb.set_trace()/norm I#<CR>
