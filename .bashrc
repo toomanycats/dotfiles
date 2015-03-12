@@ -6,6 +6,7 @@ export LSCOLORS
 alias la="ls -a"
 alias ll="ls -l"
 
-#alias xterm="xterm -fa "Monaco" -fs 10 &"
+alias xterm="xterm -fa "Monaco" -fs 10 &"
 
-xmodmap .xmodmaprc
+xmodmap ~/.xmodmaprc
+set -o vi
