@@ -27,7 +27,7 @@ call vundle#end()             "required
 
 filetype plugin indent on     "required
 syntax enable
-set foldmethod=indent
+"set foldmethod=indent
 set foldlevel=99
 setlocal foldmethod=indent
 set t_Co=1024
@@ -60,7 +60,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 
