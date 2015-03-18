@@ -22,6 +22,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/rainbow_parentheses.vim'
+Plugin  'python-rope/ropevim'
 "Plugin 'davidhalter/jedi-vim'
 call vundle#end()             "required
 
@@ -38,7 +39,7 @@ set shiftwidth=4
 set shiftround
 set number
 let mapleader=","
-set hlsearch
+"set hlsearch
 set mouse=a
 set nojoinspaces
 set smarttab
