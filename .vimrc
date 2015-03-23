@@ -22,7 +22,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/rainbow_parentheses.vim'
-Plugin  'python-rope/ropevim'
+Plugin 'python-rope/ropevim'
 "Plugin 'davidhalter/jedi-vim'
 call vundle#end()             "required
 
