@@ -27,8 +27,8 @@ Plugin 'python-rope/ropevim'
 call vundle#end()             "required
 
 filetype plugin indent on     "required
+set title " sets the xterm title to same as vim title
 syntax enable
-"set foldmethod=indent
 set foldlevel=99
 setlocal foldmethod=indent
 set t_Co=1024
@@ -39,7 +39,6 @@ set shiftwidth=4
 set shiftround
 set number
 let mapleader=","
-"set hlsearch
 set mouse=a
 set nojoinspaces
 set smarttab
