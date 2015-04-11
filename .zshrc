@@ -87,3 +87,4 @@ if [ -f ~/.Xmodmap ];then
 fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export EDITOR=vim
+alias mongostart="sudo mongod -f /etc/mongod.conf --fork"
