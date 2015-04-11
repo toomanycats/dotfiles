@@ -52,7 +52,7 @@ if [ -f ~/.Xmodmap ];then
     xmodmap ~/.Xmodmap
 fi
 
-export PYTHONPATH=$PYTHONPATH:/home/daniel/git/Python2.7/Scripts:/home/daniel/git/Python2.7/Modules
+export PYTHONPATH=$PYTHONPATH:/home/daniel/git/Python2.7/DataScience
 
 export PATH="/home/daniel/anaconda/bin:/home/daniel/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/daniel/FSL:/home/daniel/FSL:/usr/lib/cmtk/bin/:/opt/afni_bin/linux_xorg7_64"
 # export MANPATH="/usr/local/man:$MANPATH"
