@@ -47,10 +47,9 @@ export ZSH=/home/daniel/oh-my-zsh-master
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-# User configuration
-if [ -f ~/.Xmodmap ];then
-    xmodmap ~/.Xmodmap
-fi
+
+# alias
+alias vim=~/anaconda/bin/bin/vim
 
 export PYTHONPATH=$PYTHONPATH:/home/daniel/git/Python2.7/DataScience
 
@@ -82,4 +81,9 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
+
+if [ -f ~/.Xmodmap ];then
+    xmodmap ~/.Xmodmap
+fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+export EDITOR=vim
