@@ -1,11 +1,11 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/daniel/.oh-my-zsh
+export ZSH=/home/daniel/oh-my-zsh-master
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="skaro"
+#ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -48,19 +48,16 @@ ZSH_THEME="skaro"
 plugins=(git)
 
 # User configuration
-bindkey -v
+if [ -f ~/.Xmodmap ];then
+    xmodmap ~/.Xmodmap
+fi
+
+export PYTHONPATH=$PYTHONPATH:/home/daniel/git/Python2.7/Scripts:/home/daniel/git/Python2.7/Modules
+
 export PATH="/home/daniel/anaconda/bin:/home/daniel/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/daniel/FSL:/home/daniel/FSL:/usr/lib/cmtk/bin/:/opt/afni_bin/linux_xorg7_64"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-
-# set the default editor
-export EDITOR=/usr/bin/vim
-
-# use xmodmap
-if [ -f ~/.Xmodmap ];then
-    xmodmap ~/.Xmodmap
-fi
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -86,9 +83,3 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vim=~/vim27/bin/vim
-
-# mongoDB functions
-mongo_root="/mnt/Data/MongoDB"
-alias mongostart="sudo mongod --config ${mongo_root}/etc/mongodb.conf --httpinterface"
-
