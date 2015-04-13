@@ -89,3 +89,8 @@ fi
 export EDITOR=vim
 alias mongostart="sudo mongod -f /etc/mongod.conf --fork"
 alias gephi=~/gephi/bin/gephi
+
+# if user bin exists, add it to the pasth
+if [ -e ~/bin ];then
+    export PATH=~/bin:$PATH
+fi
