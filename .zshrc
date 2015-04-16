@@ -50,6 +50,7 @@ plugins=(git)
 
 # alias
 alias vim=~/anaconda/bin/bin/vim
+alias xterm="xterm -fa 'Monaco' -fs 13"
 
 export PYTHONPATH=$PYTHONPATH:/home/daniel/git/Python2.7/DataScience
 
