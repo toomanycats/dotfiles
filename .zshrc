@@ -1,4 +1,8 @@
 # Path to your oh-my-zsh installation.
+if [ -e ~/.Xmodmap ];then
+    xmodmap ~/.Xmodmap && echo -e "caps lock remapped to escape key\n"
+fi
+
 export ZSH=/home/daniel/oh-my-zsh-master
 
 # Set name of the theme to load.
@@ -53,7 +57,7 @@ alias vim=~/anaconda/bin/bin/vim
 alias xterm="xterm -fa 'Monaco' -fs 13"
 
 export PYTHONPATH=$PYTHONPATH:/home/daniel/git/Python2.7/DataScience
-
+export PYTHONPATH=/home/daniel/git/Python2.7/MRI/Modules:$PYTHONPATH
 export PATH="/home/daniel/anaconda/bin:/home/daniel/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/daniel/FSL:/home/daniel/FSL:/usr/lib/cmtk/bin/:/opt/afni_bin/linux_xorg7_64"
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -83,9 +87,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 
-if [ -f ~/.Xmodmap ];then
-    xmodmap ~/.Xmodmap
-fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export EDITOR=vim
 alias mongostart="sudo mongod -f /etc/mongod.conf --fork"
@@ -95,3 +96,5 @@ alias gephi=~/gephi/bin/gephi
 if [ -e ~/bin ];then
     export PATH=~/bin:$PATH
 fi
+
+bindkey -v
