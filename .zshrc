@@ -1,8 +1,4 @@
 # Path to your oh-my-zsh installation.
-if [ -e ~/.Xmodmap ];then
-    xmodmap ~/.Xmodmap && echo -e "caps lock remapped to escape key\n"
-fi
-
 export ZSH=/home/daniel/oh-my-zsh-master
 
 # Set name of the theme to load.
