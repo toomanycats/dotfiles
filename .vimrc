@@ -70,4 +70,5 @@ autocmd BufWritePre * :%s/\s\+$//e
 " comment out set_trace()
 nmap ct  :g/^pdb.set_trace()/norm I#<CR>
 nmap uct :g/^#pdb.set_trace()/norm 0d<space><CR>
-
+" % will match { or comments, remap % to v for speed
+noremap % v%
