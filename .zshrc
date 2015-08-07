@@ -5,7 +5,7 @@ export ZSH=/home/daniel/oh-my-zsh-master
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -45,7 +45,7 @@ export ZSH=/home/daniel/oh-my-zsh-master
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git tmux vi-mode)
 
 
 # alias
@@ -55,6 +55,8 @@ alias xterm="xterm -fa 'Monaco' -fs 13"
 export PYTHONPATH=$PYTHONPATH:/home/daniel/git/Python2.7/DataScience
 export PYTHONPATH=/home/daniel/git/Python2.7/MRI/Modules:$PYTHONPATH
 export PATH="/home/daniel/anaconda/bin:/home/daniel/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/daniel/FSL:/home/daniel/FSL:/usr/lib/cmtk/bin/:/opt/afni_bin/linux_xorg7_64"
+export PATH=/home/daniel/data_sci_cmd_line/tools:$PATH
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh

@@ -23,7 +23,7 @@ Plugin 'tmhedberg/SimpylFold'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'python-rope/ropevim'
-"Plugin 'davidhalter/jedi-vim'
+Plugin 'christoomey/vim-tmux-navigator'
 call vundle#end()             "required
 
 filetype plugin indent on     "required
@@ -70,21 +70,5 @@ autocmd BufWritePre * :%s/\s\+$//e
 " comment out set_trace()
 nmap ct  :g/^pdb.set_trace()/norm I#<CR>
 nmap uct :g/^#pdb.set_trace()/norm 0d<space><CR>
-
-" Jedi options
-"let g:jedi#goto_assignments_command = <leader>g
-"let g:jedi#goto_definitions_command = <leader>d
-"let g:jedi#documentation_command = K
-"let g:jedi#usages_command = <leader>u
-"let g:jedi#completions_command = <C-Space>
-"let g:jedi#rename_command = <leader>r
-
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
+" % will match { or comments, remap % to v for speed
+noremap % v%
