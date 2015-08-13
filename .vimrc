@@ -75,5 +75,8 @@ noremap % v%
 
 
 " auto generate a comment header
-au BufNewFile *.py 0r ~/git/dotfiles/header_template.txt
-au BufNewFile *.sh 0r ~/git/dotfiles/header_template.txt
+autocmd bufnewfile *.py so ~/git/dotfiles/header_template.txt
+autocmd bufnewfile *.py exe "1," . 10 . "g/File Name :.*/s//File Name : "
+.expand("%")
+autocmd bufnewfile *.c exe "1," . 10 . "g/Creation Date :.*/s//Creation Date
+: " .strftime("%d-%m-%Y")
