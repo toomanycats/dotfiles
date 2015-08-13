@@ -72,3 +72,8 @@ nmap ct  :g/^pdb.set_trace()/norm I#<CR>
 nmap uct :g/^#pdb.set_trace()/norm 0d<space><CR>
 " % will match { or comments, remap % to v for speed
 noremap % v%
+
+
+" auto generate a comment header
+au BufNewFile *.py 0r ~/git/dotfiles/header_template.txt
+au BufNewFile *.sh 0r ~/git/dotfiles/header_template.txt
