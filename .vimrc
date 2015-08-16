@@ -73,3 +73,9 @@ nmap ct  :g/^pdb.set_trace()/norm I#<CR>
 nmap uct :g/^#pdb.set_trace()/norm 0d<space><CR>
 " % will match { or comments, remap % to v for speed
 noremap % v%
+
+
+" auto generate a comment header
+autocmd bufnewfile *.py so ~/git/dotfiles/header_template.txt
+autocmd bufnewfile *.py exe "1," . 4 . "g/File Name :.*/s//File Name : " .expand("%")
+autocmd bufnewfile *.py exe "1," . 4 . "g/Creation Date :.*/s//Creation Date : " .strftime("%d-%m-%Y")
