@@ -51,11 +51,12 @@ plugins=(git tmux vi-mode)
 # alias
 alias vim=~/anaconda/bin/bin/vim
 alias xterm="xterm -fa 'Monaco' -fs 13"
+alias mysql='mysql --user=root --password=test --local-infile'
 
 export PYTHONPATH=$PYTHONPATH:/home/daniel/git/Python2.7/DataScience
 export PYTHONPATH=/home/daniel/git/Python2.7/MRI/Modules:$PYTHONPATH
 export PATH="/home/daniel/anaconda/bin:/home/daniel/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/daniel/FSL:/home/daniel/FSL:/usr/lib/cmtk/bin/:/opt/afni_bin/linux_xorg7_64"
-export PATH=/home/daniel/data_sci_cmd_line/tools:$PATH
+#export PATH=/home/daniel/data_sci_cmd_line/tools:$PATH
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
