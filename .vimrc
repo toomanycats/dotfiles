@@ -24,7 +24,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'python-rope/ropevim'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'johndgiese/vipy'
+Plugin '/sjl/gundo.vim'
 call vundle#end()             "required
 
 filetype plugin indent on     "required
