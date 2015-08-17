@@ -24,7 +24,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'python-rope/ropevim'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin '/sjl/gundo.vim'
+Plugin 'sjl/gundo.vim'
 call vundle#end()             "required
 
 filetype plugin indent on     "required
@@ -74,6 +74,9 @@ nmap uct :g/^#pdb.set_trace()/norm 0d<space><CR>
 " % will match { or comments, remap % to v for speed
 noremap % v%
 
+
+" gundo F5 to see undo tree
+nnoremap <F5> :GundoToggle<CR>
 
 " auto generate a comment header
 autocmd bufnewfile *.py so ~/git/dotfiles/header_template.txt
