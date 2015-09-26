@@ -87,7 +87,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export EDITOR=vim
+export EDITOR=vi
 alias mongostart="sudo mongod -f /etc/mongod.conf --fork"
 alias gephi=~/gephi/bin/gephi
 
