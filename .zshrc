@@ -97,3 +97,7 @@ if [ -e ~/bin ];then
 fi
 
 bindkey -v
+
+# FSL environment variables
+source /etc/fsl/fsl.sh
+
