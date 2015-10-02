@@ -74,6 +74,10 @@ nmap uct :g/^#pdb.set_trace()/norm 0d<space><CR>
 " % will match { or comments, remap % to v for speed
 noremap % v%
 
+" aspell: use Control v, then control T
+" http://aspell.net/man-html/Using-Aspell-with-other-Applications.html
+map ^T :w!<CR>:!aspell check %<CR>:e! %<CR>
+
 
 " gundo F5 to see undo tree
 nnoremap <F5> :GundoToggle<CR>
