@@ -88,7 +88,7 @@ source $ZSH/oh-my-zsh.sh
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export EDITOR=vi
-alias mongostart="sudo mongod -f /etc/mongod.conf --fork"
+alias mongostart="mongod --dbpath /media/Mongo --fork --log /media/Mongo/mongo.log"
 alias gephi=~/gephi/bin/gephi
 
 # if user bin exists, add it to the pasth
