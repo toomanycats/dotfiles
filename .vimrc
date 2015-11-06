@@ -85,4 +85,4 @@ nnoremap <F5> :GundoToggle<CR>
 " auto generate a comment header
 autocmd bufnewfile *.py so ~/git/dotfiles/header_template.txt
 autocmd bufnewfile *.py exe "1," . 4 . "g/File Name :.*/s//File Name : " .expand("%")
-autocmd bufnewfile *.py exe "1," . 4 . "g/Creation Date :.*/s//Creation Date : " .strftime("%d-%m-%Y")
+autocmd bufnewfile *.py exe "1," . 4 . "g/Creation Date :.*/s//Creation Date : " .strftime("%m-%d-%Y")
