@@ -44,6 +44,7 @@ set mouse=a
 set nojoinspaces
 set smarttab
 set colorcolumn=80
+highlight ColorColumn ctermbg=8
 set laststatus=2 " always show status line
 nnoremap <leader>n :NERDTree<CR>
 "nmap <CR> o<Esc>  add new line and move back up one
