@@ -27,6 +27,9 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'sjl/gundo.vim'
 call vundle#end()             "required
 
+set showmatch
+set matchpairs=(:),{:},[:]
+
 filetype plugin indent on     "required
 set title " sets the xterm title to same as vim title
 syntax enable
@@ -48,6 +51,9 @@ highlight ColorColumn ctermbg=8
 set laststatus=2 " always show status line
 nnoremap <leader>n :NERDTree<CR>
 "nmap <CR> o<Esc>  add new line and move back up one
+
+"pydoc
+nnoremap <buffer> K :<C-u>execute "!pydoc " . expand("<cword>")<CR>
 
 "colorscheme jellybeans
 " rainbow parens
