@@ -52,6 +52,7 @@ plugins=(git tmux vi-mode)
 alias vim=~/anaconda/bin/bin/vim
 alias xterm="xterm -fa 'Monaco' -fs 13"
 alias mysql='mysql --user=root --password=test --local-infile'
+alias mipav=~/mipav/mipav
 
 export PYTHONPATH=$PYTHONPATH:/home/daniel/git/Python2.7/DataScience
 export PYTHONPATH=/home/daniel/git/Python2.7/MRI/Modules:$PYTHONPATH
