@@ -75,10 +75,10 @@ let g:syntastic_check_on_wq = 1
 " remove trailing white space after :w
 autocmd BufWritePre * :%s/\s\+$//e
 
-" comment out  Python break point
+" comment out  Python break points
 map <leader>c :g/\s*\(#\)\@<!pdb.set_trace()/normal I#
 
-" uncomment all break points
+" uncomment all Python break points
 map <leader>uc :g/\s*#pdb.set_trace()/normal ^x
 
 " % will match { or comments, remap % to v for speed
