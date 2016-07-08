@@ -102,7 +102,10 @@ if [ -e ~/bin ];then
     export PATH=~/bin:$PATH
 fi
 
+# VI mode
 bindkey -v
+# enable Cnt R for search history: required with VI mode bindings on
+bindkey "^r" history-incremental-search-backward
 
 # FSL environment variables
 source /etc/fsl/fsl.sh
