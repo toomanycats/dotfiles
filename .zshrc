@@ -60,6 +60,11 @@ export PATH="/home/daniel/anaconda/bin:/home/daniel/bin:/usr/local/sbin:/usr/loc
 export PATH=~/spark-1.5.2-bin-hadoop2.6/bin:~/spark-1.5.2-bin-hadoop2.6/sbin:$PATH
 #export PATH=/home/daniel/data_sci_cmd_line/tools:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
+#
+### Ruby ###
+export PATH=$HOME/.rbenv/bin:$PATH
+export PATH=$HOME/.rbenv/plugins/ruby-build/bin:$PATH
+eval "$(rbenv init -)"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,3 +107,5 @@ bindkey -v
 # FSL environment variables
 source /etc/fsl/fsl.sh
 
+# shell options
+setopt extended_glob
