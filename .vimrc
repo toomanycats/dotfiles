@@ -42,6 +42,7 @@ set expandtab
 set shiftwidth=4
 set shiftround
 set number
+set relativenumber
 let mapleader=","
 set mouse=a
 set nojoinspaces
