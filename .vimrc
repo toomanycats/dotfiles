@@ -77,7 +77,7 @@ let g:syntastic_check_on_wq = 1
 autocmd BufWritePre * :%s/\s\+$//e
 
 " comment out  Python break points
-map <leader>c :g/\s*\(#\)\@<!pdb.set_trace()/normal I#
+nnoremap <leader>c :g/\s*\(#\)\@<!pdb.set_trace()/normal I#
 
 " uncomment all Python break points
 map <leader>uc :g/\s*#pdb.set_trace()/normal ^x
