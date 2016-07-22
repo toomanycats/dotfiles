@@ -70,7 +70,7 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
 
 " remove trailing white space after :w
@@ -81,6 +81,9 @@ nnoremap <leader>c :g/\s*\(#\)\@<!pdb.set_trace()/normal I#
 
 " uncomment all Python break points
 nnoremap <leader>uc :g/\s*#pdb.set_trace()/normal ^x
+
+" correct missing space after comma, period or question mark
+nnoremap <leader>cs :%s/\([,.?]\)\(\w\+\)/\1 \2/g
 
 " % will match { or comments, remap % to v for speed
 noremap % v%
