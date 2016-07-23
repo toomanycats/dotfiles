@@ -54,6 +54,9 @@ alias xterm="xterm -fa 'Monaco' -fs 13"
 alias mysql='mysql --user=root --password=test --local-infile'
 alias mipav=~/mipav/mipav
 
+# alias for default behavior
+alias xclip="xclip -selection clipboard"
+
 export PYTHONPATH=$PYTHONPATH:/home/daniel/git/Python2.7/DataScience
 export PYTHONPATH=/home/daniel/git/Python2.7/MRI/Modules:$PYTHONPATH
 export PATH="/home/daniel/anaconda/bin:/home/daniel/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/daniel/FSL:/home/daniel/FSL:/usr/lib/cmtk/bin/:/opt/afni_bin/linux_xorg7_64"
