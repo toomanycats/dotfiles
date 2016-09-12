@@ -55,12 +55,12 @@ plugins=(git vi-mode)
 
 # alias for default behavior
 alias xclip="xclip -selection clipboard"
-
-export PATH=/home/dcuneo/anaconda/bin:$PATH
-export PATH=/home/daniel/bin:$PATH
+export PATH=/home/dcuneo/anaconda3/bin:$PATH
+export PATH=/home/dcuneo/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/sbin:/usr/bin:/sbin:/bin:$PATH
+export PATH=/home/dcuneo/git_bash:$PATH
 
 #export PATH=~/spark-1.5.2-bin-hadoop2.6/bin:~/spark-1.5.2-bin-hadoop2.6/sbin:$PATH
 
