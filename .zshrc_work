@@ -47,14 +47,15 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git vi-mode)
 
+alias vim=/usr/bin/vim
+alias vim8=/home/dcuneo/bin/vim
 
-# alias
-#alias vim=~/anaconda/bin/bin/vim
 #alias mysql='mysql --user=root --password=test --local-infile'
-#alias mipav=~/mipav/mipav
+alias mipav=/netopt/mipav/mipav
 
 # alias for default behavior
 alias xclip="xclip -selection clipboard"
+
 export PATH=/home/dcuneo/anaconda3/bin:$PATH
 export PATH=/home/dcuneo/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
@@ -63,6 +64,8 @@ export PATH=/usr/sbin:/usr/bin:/sbin:/bin:$PATH
 export PATH=/home/dcuneo/git_bash:$PATH
 
 #export PATH=~/spark-1.5.2-bin-hadoop2.6/bin:~/spark-1.5.2-bin-hadoop2.6/sbin:$PATH
+
+export PYTHONPATH=/home/dcuneo/.vim/bundle/YouCompleteMe/python/ycm:$PYTHONPATH
 
 ### Ruby ###
 #export PATH=$HOME/.rbenv/bin:$PATH
@@ -97,8 +100,8 @@ source $ZSH/oh-my-zsh.sh
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export EDITOR=vi
-alias mongostart="mongod --dbpath /media/Mongo --fork --log /media/Mongo/mongo.log"
-alias gephi=~/gephi/bin/gephi
+#alias mongostart="mongod --dbpath /media/Mongo --fork --log /media/Mongo/mongo.log"
+#alias gephi=~/gephi/bin/gephi
 
 # if user bin exists, add it to the pasth
 if [ -e ~/bin ];then
@@ -115,3 +118,6 @@ bindkey "^r" history-incremental-search-backward
 
 # shell options
 setopt extended_glob
+
+# terminal window title
+#PROMPT_COMMAND='echo -ne "\033]0;${HOSTNAME}"'
