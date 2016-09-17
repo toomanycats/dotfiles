@@ -96,6 +96,7 @@ map ^T :w!<CR>:!aspell check %<CR>:e! %<CR>
 nnoremap <F5> :GundoToggle<CR>
 
 " fix Gundo with Python3
+" https://bitbucket.org/sjl/gundo.vim/issues/42/about-python3-support
 let gundo_prefer_python3 = 1
 
 " auto generate a comment header
