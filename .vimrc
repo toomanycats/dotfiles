@@ -92,11 +92,15 @@ noremap % v%
 " http://aspell.net/man-html/Using-Aspell-with-other-Applications.html
 map ^T :w!<CR>:!aspell check %<CR>:e! %<CR>
 
-
 " gundo F5 to see undo tree
 nnoremap <F5> :GundoToggle<CR>
+
+" fix Gundo with Python3
+let gundo_prefer_python3 = 1
 
 " auto generate a comment header
 autocmd bufnewfile *.py so ~/git/dotfiles/header_template.txt
 autocmd bufnewfile *.py exe "1," . 4 . "g/File Name :.*/s//File Name : " .expand("%")
 autocmd bufnewfile *.py exe "1," . 4 . "g/Creation Date :.*/s//Creation Date : " .strftime("%m-%d-%Y")
+
+
