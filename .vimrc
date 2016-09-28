@@ -12,7 +12,6 @@ Plugin 'gmarik/Vundle.vim'
 
 "Keep Plugin commands between vundle#begin/end.
 Plugin 'bling/vim-airline'
-Plugin 'nanotech/jellybeans.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'Valloric/YouCompleteMe'
@@ -23,7 +22,6 @@ Plugin 'tmhedberg/SimpylFold'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'python-rope/ropevim'
-Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'sjl/gundo.vim'
 call vundle#end()             "required
 
@@ -35,7 +33,8 @@ set title " sets the xterm title to same as vim title
 syntax enable
 set foldlevel=99
 setlocal foldmethod=indent
-set t_Co=1024
+" old work around
+set t_Co=256
 set background=dark
 set tabstop=4
 set expandtab
@@ -68,7 +67,7 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
@@ -92,11 +91,13 @@ noremap % v%
 " http://aspell.net/man-html/Using-Aspell-with-other-Applications.html
 map ^T :w!<CR>:!aspell check %<CR>:e! %<CR>
 
-
 " gundo F5 to see undo tree
 nnoremap <F5> :GundoToggle<CR>
+" fix for python3
+" https://bitbucket.org/sjl/gundo.vim/issues/42/about-python3-support
+let gundo_prefer_python3 = 1
 
 " auto generate a comment header
-autocmd bufnewfile *.py so ~/git/dotfiles/header_template.txt
+autocmd bufnewfile *.py so ~/git_dot/header_template.txt
 autocmd bufnewfile *.py exe "1," . 4 . "g/File Name :.*/s//File Name : " .expand("%")
 autocmd bufnewfile *.py exe "1," . 4 . "g/Creation Date :.*/s//Creation Date : " .strftime("%m-%d-%Y")
