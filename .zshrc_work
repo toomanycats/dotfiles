@@ -47,11 +47,19 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git vi-mode)
 
+# somewhere vi=vim is set: Hack work around
+bool=$(alias | grep -c "vi=vim")
+if [ $bool -gt 0 ];then
+    unalias vi
+fi
+
 alias vim=/usr/bin/vim
 alias vim8=/home/dcuneo/bin/vim
 
 #alias mysql='mysql --user=root --password=test --local-infile'
 alias mipav=/netopt/mipav/mipav
+# freesurfer binaries like mri_convert
+export PATH=/netopt/rhel7/freesurfer/bin:$PATH
 
 # alias for default behavior
 alias xclip="xclip -selection clipboard"
@@ -62,10 +70,15 @@ export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/sbin:/usr/bin:/sbin:/bin:$PATH
 export PATH=/home/dcuneo/git_bash:$PATH
+export PATH=/netopt/freesurfer/bin:$PATH
 
 #export PATH=~/spark-1.5.2-bin-hadoop2.6/bin:~/spark-1.5.2-bin-hadoop2.6/sbin:$PATH
 
-export PYTHONPATH=/home/dcuneo/.vim/bundle/YouCompleteMe/python/ycm:$PYTHONPATH
+export PYTHONPATH=~/.vim/bundle/YouCompleteMe/python/ycm:$PYTHONPATH
+export PYTHONPATH=~/.vim/bundle/ropevim:$PYTHONPATH
+
+# prevent GIT from using GUI ssh-askpass
+export GIT_ASKPASS=
 
 ### Ruby ###
 #export PATH=$HOME/.rbenv/bin:$PATH
@@ -78,11 +91,10 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+    unset SSH_ASKPASS
+    export GIT_ASKPASS=
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -121,3 +133,19 @@ setopt extended_glob
 
 # terminal window title
 #PROMPT_COMMAND='echo -ne "\033]0;${HOSTNAME}"'
+
+
+#Matlab Runtime Compiler
+# I unzipped MCRInstaller from /netopt to /export/data
+export LD_LIBRARY_PATH=/export/data/matlab/v717/runtime/glnxa64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/export/data/matlab/v717/bin/glnxa64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/export/data/matlab/v717/sys/os/glnxa64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/export/data/matlab/v717/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/export/data/matlab/v717/sys/java/jre/glnxa64/jre/lib/amd64/server:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/export/data/matlab/v717/sys/java/jre/glnxa64/jre/lib/amd64:$LD_LIBRARY_PATH
+
+export XAPPLRESDIR=/export/data/matlab/v717/X11/app-defaults
+
+
+
+
