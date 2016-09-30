@@ -23,6 +23,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'python-rope/ropevim'
 Plugin 'sjl/gundo.vim'
+Plugin 'vimoutliner/vimoutliner.git'
 call vundle#end()             "required
 
 set showmatch
