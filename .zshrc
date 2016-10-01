@@ -55,7 +55,7 @@ alias mysql='mysql --user=root --password=test --local-infile'
 alias mipav=~/mipav/mipav
 
 # alias for default behavior
-alias xclip="xclip -selection clipboard"
+alias xc="xclip -selection clipboard"
 
 export PYTHONPATH=$PYTHONPATH:/home/daniel/git/Python2.7/DataScience
 export PYTHONPATH=/home/daniel/git/Python2.7/MRI/Modules:$PYTHONPATH
@@ -115,3 +115,7 @@ source /etc/fsl/fsl.sh
 
 # shell options
 setopt extended_glob
+
+## wifi hacks
+# turn off bluetooth
+rfkill block bluetooth
