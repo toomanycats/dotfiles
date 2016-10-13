@@ -55,6 +55,7 @@ fi
 
 alias vim=/usr/bin/vim
 alias vim8=/home/dcuneo/bin/vim
+alias sqlstudio=~/SQLiteStudio/sqlitestudio
 
 #alias mysql='mysql --user=root --password=test --local-infile'
 alias mipav=/netopt/mipav/mipav
@@ -70,11 +71,15 @@ export PATH=/usr/sbin:/usr/bin:/sbin:/bin:$PATH
 export PATH=/home/dcuneo/git_bash:$PATH
 export PATH=/netopt/rhel7/versions/cmtk/bin:$PATH
 export PATH=~/parallel:$PATH
-
+export PATH=/netopt/rhel7/freesurfer/bin:$PATH
+export PATH=~/git_tools:$PATH
 #export PATH=~/spark-1.5.2-bin-hadoop2.6/bin:~/spark-1.5.2-bin-hadoop2.6/sbin:$PATH
 
 export PYTHONPATH=~/.vim/bundle/YouCompleteMe/python/ycm:$PYTHONPATH
 export PYTHONPATH=~/.vim/bundle/ropevim:$PYTHONPATH
+
+export PYTHONPATH=~/git_python27_mri:$PYTHONPATH
+export PYTHONPATH=~/git_single_sub_vm:$PYTHONPATH
 
 # prevent GIT from using GUI ssh-askpass
 export GIT_ASKPASS=
@@ -133,7 +138,8 @@ setopt extended_glob
 # terminal window title
 #PROMPT_COMMAND='echo -ne "\033]0;${HOSTNAME}"'
 
-# FreeSurfer
-source /netopt/rhel7/freesurfer/SetUpFreeSurfer.sh
+# FreeSurfer Home
+export FREESURFER_HOME=/netopt/rhel7/freesurfer
 
-
+# cmtk binaries
+export PATH=/netopt/rhel7/versions/cmtk/lib/cmtk/bin:$PATH
