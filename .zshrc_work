@@ -79,10 +79,8 @@ export PATH=~/git_tools:$PATH
 export PYTHONPATH=~/.vim/bundle/YouCompleteMe/python/ycm:$PYTHONPATH
 export PYTHONPATH=~/.vim/bundle/ropevim:$PYTHONPATH
 
-export PYTHONPATH=~/git_python27_mri:$PYTHONPATH
-export PYTHONPATH=~/git_python27_mri/Modules:$PYTHONPATH
 export PYTHONPATH=~/git_python27_mri/Modules/2to3:$PYTHONPATH
-export PYTHONPATH=~/git_single_sub_vm:$PYTHONPATH
+export PYTHONPATH=~/git_pipeline:$PYTHONPATH
 
 # prevent GIT from using GUI ssh-askpass
 export GIT_ASKPASS=
