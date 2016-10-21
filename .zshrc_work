@@ -57,6 +57,7 @@ alias vim=/usr/bin/vim
 alias vim8=/home/dcuneo/bin/vim
 alias studio=~/SQLiteStudio/sqlitestudio
 alias otl2html=~/.vim/bundle/vimoutliner/vimoutliner/scripts/otl2html.py
+alias ipython="ipython --profile ipython5"
 
 #alias mysql='mysql --user=root --password=test --local-infile'
 alias mipav=/netopt/mipav/mipav
