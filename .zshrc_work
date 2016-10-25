@@ -53,6 +53,9 @@ if [ $bool -gt 0 ];then
     unalias vi
 fi
 
+### unmask
+umask 0002
+
 alias vim=/usr/bin/vim
 alias vim8=/home/dcuneo/bin/vim
 alias studio=~/SQLiteStudio/sqlitestudio
