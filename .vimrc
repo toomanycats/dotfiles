@@ -53,6 +53,10 @@ set laststatus=2 " always show status line
 nnoremap <leader>n :NERDTree<CR>
 "nmap <CR> o<Esc>  add new line and move back up one
 
+"YCM
+"goto def
+noremap <leader>jd :YcmCompleter GoToDefinition <CR>
+
 "pydoc
 nnoremap <buffer> K :<C-u>execute "!pydoc " . expand("<cword>")<CR>
 
@@ -103,7 +107,7 @@ let gundo_prefer_python3 = 1
 let gundo_prefer_python3 = 1
 
 " ropevim
-let ropevim_vim_completion=0
-let ropevim_extended_complete=0
-let ropevim_codeassist_maxfixes=1
-let ropevim_goto_def_newwin="tabnew"
+"let ropevim_vim_completion=0
+"let ropevim_extended_complete=0
+"let ropevim_codeassist_maxfixes=1
+"let ropevim_goto_def_newwin="tabnew"
