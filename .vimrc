@@ -103,9 +103,7 @@ let gundo_prefer_python3 = 1
 let gundo_prefer_python3 = 1
 
 " ropevim
-" don't use auto completion
 let ropevim_vim_completion=0
-
-" add the name of modules you want to autoimport
-let g:ropevim_autoimport_modules = ["os", "shutil", "re"]
-
+let ropevim_extended_complete=0
+let ropevim_codeassist_maxfixes=1
+let ropevim_goto_def_newwin="tabnew"
