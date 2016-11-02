@@ -95,10 +95,6 @@ nnoremap <leader>cs :%s/\([,.?]\)\(\w\+\)/\1 \2/g
 " % will match { or comments, remap % to v for speed
 noremap % v%
 
-" aspell: use Control v, then control T
-" http://aspell.net/man-html/Using-Aspell-with-other-Applications.html
-map ^T :w!<CR>:!aspell check %<CR>:e! %<CR>
-
 " gundo F5 to see undo tree
 nnoremap <F5> :GundoToggle<CR>
 " fix for python3
@@ -109,16 +105,13 @@ let gundo_prefer_python3 = 1
 " https://bitbucket.org/sjl/gundo.vim/issues/42/about-python3-support
 let gundo_prefer_python3 = 1
 
-" ropevim
-"let ropevim_vim_completion=0
-"let ropevim_extended_complete=0
-"let ropevim_codeassist_maxfixes=1
-"let ropevim_goto_def_newwin="tabnew"
-
-" function to search *.py using dir on my PYTHONPATH
-nnoremap <leader>s :g 'vimgrep /<C-R><C-W>/jg' join(map(split($PYTHONPATH, ':'), 'v:val . "/*.py"'))
-"<CR>:cw<CR>
-
 " ag for ack
-" https://github.com/ggreer/the_silver_searcher
+ https://github.com/ggreer/the_silver_searcher
 let g:ackprg = 'ag --vimgrep'
+
+" The Silver Searcher
+" Use ag over grep
+set grepprg=ag\ --nogroup\ --nocolor
+
+" bind K to grep word under cursor
+nnoremap <leader>s :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
