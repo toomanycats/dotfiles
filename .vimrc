@@ -24,7 +24,7 @@ Plugin 'kien/rainbow_parentheses.vim'
 "Plugin 'python-rope/ropevim'
 Plugin 'sjl/gundo.vim'
 Plugin 'vimoutliner/vimoutliner.git'
-Plugin 'ggreer/the_silver_searcher.git'
+Plugin 'mileszs/ack.vim'
 call vundle#end()             "required
 
 set showmatch
@@ -116,17 +116,9 @@ let gundo_prefer_python3 = 1
 "let ropevim_goto_def_newwin="tabnew"
 
 " function to search *.py using dir on my PYTHONPATH
-nnoremap <leader>s :g 'vimgrep /<C-R><C-W>/jg' join(map(split($PYTHONPATH, ':'), 'v:val . "/*.py"')) 
+nnoremap <leader>s :g 'vimgrep /<C-R><C-W>/jg' join(map(split($PYTHONPATH, ':'), 'v:val . "/*.py"'))
 "<CR>:cw<CR>
 
-" The Silver Searcher
-if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-endif
+" ag for ack
+" https://github.com/ggreer/the_silver_searcher
+let g:ackprg = 'ag --vimgrep'
