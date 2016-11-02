@@ -21,9 +21,10 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'python-rope/ropevim'
+"Plugin 'python-rope/ropevim'
 Plugin 'sjl/gundo.vim'
 Plugin 'vimoutliner/vimoutliner.git'
+Plugin 'ggreer/the_silver_searcher.git'
 call vundle#end()             "required
 
 set showmatch
@@ -50,8 +51,9 @@ set smarttab
 set colorcolumn=80
 highlight ColorColumn ctermbg=8
 set laststatus=2 " always show status line
+
+" nerdtree
 nnoremap <leader>n :NERDTree<CR>
-"nmap <CR> o<Esc>  add new line and move back up one
 
 "YCM
 "goto def
@@ -60,7 +62,8 @@ noremap <leader>jd :YcmCompleter GoToDefinition <CR>
 "pydoc
 nnoremap <buffer> K :<C-u>execute "!pydoc " . expand("<cword>")<CR>
 
-"colorscheme jellybeans
+colorscheme jellybeans
+
 " rainbow parens
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
@@ -72,10 +75,10 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 1
+let g:syntastic_check_on_wq = 0
 
 " remove trailing white space after :w
 autocmd BufWritePre * :%s/\s\+$//e
@@ -111,3 +114,19 @@ let gundo_prefer_python3 = 1
 "let ropevim_extended_complete=0
 "let ropevim_codeassist_maxfixes=1
 "let ropevim_goto_def_newwin="tabnew"
+
+" function to search *.py using dir on my PYTHONPATH
+nnoremap <leader>s :g 'vimgrep /<C-R><C-W>/jg' join(map(split($PYTHONPATH, ':'), 'v:val . "/*.py"')) 
+"<CR>:cw<CR>
+
+" The Silver Searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
