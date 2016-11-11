@@ -57,8 +57,9 @@ fi
 ### unmask
 umask 0002
 
-alias vim=/usr/bin/vim
-alias vim8=/home/dcuneo/bin/vim
+alias vim=/usr/local/bin/vim
+export VIMRUNTIME=/home/dcuneo/vim/runtime
+
 alias studio=~/SQLiteStudio/sqlitestudio
 alias otl2html=~/.vim/bundle/vimoutliner/vimoutliner/scripts/otl2html.py
 alias ipython="ipython --profile ipython5"
