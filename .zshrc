@@ -57,6 +57,11 @@ alias mipav=~/mipav/mipav
 # alias for default behavior
 alias xc="xclip -selection clipboard"
 
+# typically use ipython 5 in py3
+alias ipython="ipython --profile ipython5"
+# moved most data to spinning iron drive
+export NLTK_DATA="/media/daniel/Misc/nltk_data"
+
 export PYTHONPATH=$PYTHONPATH:/home/daniel/git/Python2.7/DataScience
 export PYTHONPATH=/home/daniel/git/Python2.7/MRI/Modules:$PYTHONPATH
 export PATH="/home/daniel/anaconda/bin:/home/daniel/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/daniel/FSL:/home/daniel/FSL:/usr/lib/cmtk/bin/:/opt/afni_bin/linux_xorg7_64"
