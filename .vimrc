@@ -11,6 +11,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 "Keep Plugin commands between vundle#begin/end.
+Plugin 'Valloric/vim-operator-highlight'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'flazz/vim-colorschemes'
@@ -106,7 +107,7 @@ let gundo_prefer_python3 = 1
 let gundo_prefer_python3 = 1
 
 " ag for ack
- https://github.com/ggreer/the_silver_searcher
+" https://github.com/ggreer/the_silver_searcher
 let g:ackprg = 'ag --vimgrep'
 
 " The Silver Searcher
@@ -114,4 +115,4 @@ let g:ackprg = 'ag --vimgrep'
 set grepprg=ag\ --nogroup\ --nocolor
 
 " bind K to grep word under cursor
-nnoremap <leader>s :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+"nnoremap <leader>s :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
