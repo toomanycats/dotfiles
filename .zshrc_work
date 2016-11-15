@@ -83,6 +83,7 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/sbin:/usr/bin:/sbin:/bin:$PATH
 export PATH=/netopt/rhel7/versions/cmtk/bin:$PATH
 export PATH=/netopt/rhel7/freesurfer/bin:$PATH
+export PATH=/netopt/dicom/bin:$PATH
 
 export PYTHONPATH=/home/dcuneo/.vim/bundle/YouCompleteMe/python/ycm:$PYTHONPATH
 export PYTHONPATH=~/.vim/bundle/ropevim:$PYTHONPATH
@@ -139,7 +140,8 @@ bindkey -v
 bindkey "^r" history-incremental-search-backward
 
 # FSL environment variables
-#source /etc/fsl/fsl.sh
+export FSLDIR=/netopt/rhel7/fsl
+source /netopt/rhel7/fsl/etc/fslconf/fsl.sh
 
 # shell options
 setopt extended_glob
