@@ -77,9 +77,14 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_auto_loc_list = 0
+let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
+"let g:syntastic_python_checkers = ['pylint', 'flake8', 'python']
+let g:syntastic_python_checkers = ['pylint']
+
+nnoremap <leader>st :SyntasticToggle <enter>
+nnoremap <leader>sc :SyntasticCheck <enter>
 
 " remove trailing white space after :w
 autocmd BufWritePre * :%s/\s\+$//e
