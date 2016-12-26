@@ -162,4 +162,4 @@ export FREESURFER_HOME=/netopt/rhel7/freesurfer
 # cmtk binaries
 export PATH=/netopt/rhel7/versions/cmtk/lib/cmtk/bin:$PATH
 
-
+alias gtypist="GTYPIST_PATH=/working/sdl_analysis/software/gtypist/lessons gtypist gtypist.typ"
