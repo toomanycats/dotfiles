@@ -39,6 +39,7 @@ load-plugins=
 # --enable=similarities". If you want to run only the classes checker, but have
 # no Warning level messages displayed, use"--disable=all --enable=classes
 # --disable=W"
+#
 #disable="Missing method docstring",
 disable=C0111,
 
@@ -118,7 +119,9 @@ additional-builtins=
 
 
 [TYPECHECK]
-
+# work around Pandas error for "generator" error
+generated-members=pandas.*
+#
 # Tells whether missing members accessed in mixin class should be ignored. A
 # mixin class is detected if its name ends with "mixin" (case insensitive).
 ignore-mixin-members=yes
