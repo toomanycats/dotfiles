@@ -57,7 +57,7 @@ fi
 ### unmask
 umask 0002
 
-alias vim=/usr/local/bin/vim
+alias vim="/usr/local/bin/vim -X"
 export VIMRUNTIME=/home/dcuneo/vim/runtime
 
 alias studio=~/SQLiteStudio/sqlitestudio
@@ -82,13 +82,21 @@ export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/sbin:/usr/bin:/sbin:/bin:$PATH
 export PATH=/netopt/rhel7/versions/cmtk/bin:$PATH
-export PATH=/netopt/rhel7/freesurfer/bin:$PATH
+export PATH=/netopt/dicom/bin:$PATH
+export PATH=/netopt/rhel7/fsl/bin:$PATH
+
+export PATH=~/.cargo/bin:$PATH
+# custom pipeline command line prog
+export PATH=/working/sdl_analysis/software/git_pipeline/CommandLineProg:$PATH
 
 export PYTHONPATH=/home/dcuneo/.vim/bundle/YouCompleteMe/python/ycm:$PYTHONPATH
 export PYTHONPATH=~/.vim/bundle/ropevim:$PYTHONPATH
 
 export PYTHONPATH=/working/sdl_analysis/software/git_pipeline:$PYTHONPATH
 export PYTHONPATH=/working/sdl_analysis/software/git_tools:$PYTHONPATH
+
+# NLTK data dir
+export NLTK_DATA=/working/sdl_analysis/software/nltk_data
 
 # prevent GIT from using GUI ssh-askpass
 export GIT_ASKPASS=
@@ -139,7 +147,8 @@ bindkey -v
 bindkey "^r" history-incremental-search-backward
 
 # FSL environment variables
-#source /etc/fsl/fsl.sh
+export FSLDIR=/netopt/rhel7/fsl
+source $FSLDIR/etc/fslconf/fsl.sh
 
 # shell options
 setopt extended_glob
@@ -149,6 +158,11 @@ setopt extended_glob
 
 # FreeSurfer Home
 export FREESURFER_HOME=/netopt/rhel7/freesurfer
-
+export PERL5LIB=/netopt/rhel7/freesurfer/mni/lib/perl5/5.8.5:$PERL5LIB
+export PATH=/netopt/rhel7/freesurfer/mni/bin:$PATH
+export PATH=/netopt/rhel7/freesurfer/bin:$PATH
+#
 # cmtk binaries
 export PATH=/netopt/rhel7/versions/cmtk/lib/cmtk/bin:$PATH
+
+alias gtypist="GTYPIST_PATH=/working/sdl_analysis/software/gtypist/lessons gtypist gtypist.typ"
