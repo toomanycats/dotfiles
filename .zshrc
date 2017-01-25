@@ -66,15 +66,16 @@ export PYTHONPATH=$PYTHONPATH:/home/daniel/git/Python2.7/DataScience
 export PYTHONPATH=/home/daniel/git/Python2.7/MRI/Modules:$PYTHONPATH
 export PATH="/home/daniel/anaconda/bin:/home/daniel/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/daniel/FSL:/home/daniel/FSL:/usr/lib/cmtk/bin/:/opt/afni_bin/linux_xorg7_64"
 export PATH=~/spark-1.5.2-bin-hadoop2.6/bin:~/spark-1.5.2-bin-hadoop2.6/sbin:$PATH
-#export PATH=/home/daniel/data_sci_cmd_line/tools:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
-#
+# Rust
+export PATH=~/.cargo/bin:$PATH
 ### Ruby ###
 export PATH=$HOME/.rbenv/bin:$PATH
 export PATH=$HOME/.rbenv/plugins/ruby-build/bin:$PATH
 eval "$(rbenv init -)"
 
 source $ZSH/oh-my-zsh.sh
+# to improve vi key bindings in the terminal
+export timeout=1
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
