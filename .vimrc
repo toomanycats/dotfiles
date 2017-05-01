@@ -13,19 +13,20 @@ Plugin 'gmarik/Vundle.vim'
 "Keep Plugin commands between vundle#begin/end.
 Plugin 'Valloric/vim-operator-highlight'
 Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-fugitive'
+"Plugin 'tpope/vim-fugitive'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'fs111/pydoc.vim'
 Plugin 'hdima/python-syntax'
-Plugin 'scrooloose/nerdtree'
+"Plugin 'scrooloose/nerdtree'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/rainbow_parentheses.vim'
 "Plugin 'python-rope/ropevim'
+Plugin 'davidhalter/jedi-vim'
 Plugin 'sjl/gundo.vim'
-Plugin 'vimoutliner/vimoutliner.git'
-Plugin 'mileszs/ack.vim'
+"Plugin 'vimoutliner/vimoutliner.git'
+"Plugin 'mileszs/ack.vim'
 call vundle#end()             "required
 
 set showmatch
@@ -90,10 +91,10 @@ nnoremap <leader>sc :SyntasticCheck <enter>
 autocmd BufWritePre * :%s/\s\+$//e
 
 " comment out  Python break points
-nnoremap <leader>c :g/\s*\(#\)\@<!pdb.set_trace()/normal I#
+nnoremap <leader>c :g/\s*\(#\)\@<!pdb.set_trace()/normal I 
 
 " uncomment all Python break points
-nnoremap <leader>uc :g/\s*#pdb.set_trace()/normal ^x
+nnoremap <leader>uc :g/\s*#pdb.set_trace()/normal ^x 
 
 " correct missing space after comma, period or question mark
 nnoremap <leader>cs :%s/\([,.?]\)\(\w\+\)/\1 \2/g
@@ -113,11 +114,14 @@ let gundo_prefer_python3 = 1
 
 " ag for ack
 " https://github.com/ggreer/the_silver_searcher
-let g:ackprg = 'ag --vimgrep'
+"let g:ackprg = 'ag --vimgrep'
 
 " The Silver Searcher
 " Use ag over grep
-set grepprg=ag\ --nogroup\ --nocolor
+"set grepprg=ag\ --nogroup\ --nocolor
 
 " bind K to grep word under cursor
 "nnoremap <leader>s :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+" JEDI
+let g:jedi#completions_enabled = 0
