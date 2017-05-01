@@ -12,12 +12,13 @@ Plugin 'gmarik/Vundle.vim'
 
 "Keep Plugin commands between vundle#begin/end.
 Plugin 'Valloric/vim-operator-highlight'
-Plugin 'bling/vim-airline'
+Plugin 'itchyny/lightline.vim'
+"Plugin 'bling/vim-airline'
 "Plugin 'tpope/vim-fugitive'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'fs111/pydoc.vim'
-Plugin 'hdima/python-syntax'
+"Plugin 'fs111/pydoc.vim'
+"Plugin 'hdima/python-syntax'
 "Plugin 'scrooloose/nerdtree'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'scrooloose/syntastic'
@@ -77,12 +78,18 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_python_pylint_rcfile='/home/dcuneo/git_dot/.pylintrc'
+let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_check_on_wq = 1
 "let g:syntastic_python_checkers = ['pylint', 'flake8', 'python']
 let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_mode_map = {
+    \ "mode": "passive",
+    \ "active_filetypes": [],
+    \ "passive_filetypes": ["python"] }
 
 nnoremap <leader>st :SyntasticToggle <enter>
 nnoremap <leader>sc :SyntasticCheck <enter>
@@ -91,10 +98,10 @@ nnoremap <leader>sc :SyntasticCheck <enter>
 autocmd BufWritePre * :%s/\s\+$//e
 
 " comment out  Python break points
-nnoremap <leader>c :g/\s*\(#\)\@<!pdb.set_trace()/normal I 
+nnoremap <leader>c :g/\s*\(#\)\@<!pdb.set_trace()/normal I
 
 " uncomment all Python break points
-nnoremap <leader>uc :g/\s*#pdb.set_trace()/normal ^x 
+nnoremap <leader>uc :g/\s*#pdb.set_trace()/normal ^x
 
 " correct missing space after comma, period or question mark
 nnoremap <leader>cs :%s/\([,.?]\)\(\w\+\)/\1 \2/g
