@@ -98,7 +98,7 @@ nnoremap <leader>sc :SyntasticCheck <enter>
 autocmd BufWritePre * :%s/\s\+$//e
 
 " comment out  Python break points
-nnoremap <leader>c :g/\s*\(#\)\@<!pdb.set_trace()/normal I
+nnoremap <leader>c :g/\s*\(#\)\@<!pdb.set_trace()/normal I#<enter>
 
 " uncomment all Python break points
 nnoremap <leader>uc :g/\s*#pdb.set_trace()/normal ^x
