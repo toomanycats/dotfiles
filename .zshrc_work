@@ -3,7 +3,7 @@ export ZSH=/home/dcuneo/oh-my-zsh
 
 # normally, git repos were kept in /working/sdl_analysis
 # since theat file system has been unstable, it's been moved
-software_root="/data/sugrue1"
+software_root="/working/sdl_analysis"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -69,6 +69,7 @@ alias ipython="ipython --profile ipython5"
 alias Rscript=${software_root}/software/R-3.3.3/lib64/R/bin/Rscript
 alias R=${software_root}/software/R-3.3.3/bin/R
 alias mipav=/netopt/mipav/mipav
+alias tmux=/netopt/share/bin/local/sdl/bin/tmux
 
 # alias for default behavior
 alias xclip="xclip -selection clipboard"
@@ -76,7 +77,7 @@ alias xclip="xclip -selection clipboard"
 export PATH=${software_root}/software/anaconda3/bin:$PATH
 export PATH=${software_root}/software/git_tools:$PATH
 export PATH=${software_root}/software/parallel:$PATH
-export PATH=${sofware_root}/software/git_pipeline/CommandLineProg:$PATH
+export PATH=${software_root}/software/git_pipeline/CommandLineProg:$PATH
 export PATH=${software_root}/software/git_unwarp:$PATH
 
 export PATH=/home/dcuneo/.vim/bundle/YouCompleteMe/python/ycm:$PATH
@@ -94,7 +95,7 @@ export PATH=/netopt/rhel7/fsl/bin:$PATH
 # custom pipeline command line prog
 
 export PYTHONPATH=/home/dcuneo/.vim/bundle/YouCompleteMe/python/ycm:$PYTHONPATH
-# rope isn't working 
+# rope isn't working
 #export PYTHONPATH=~/.vim/bundle/ropevim:$PYTHONPATH
 
 export PYTHONPATH=${software_root}/software/git_pipeline:$PYTHONPATH
@@ -120,8 +121,10 @@ source $ZSH/oh-my-zsh.sh
 if [[ -n $SSH_CONNECTION ]]; then
     unset SSH_ASKPASS
     export GIT_ASKPASS=
+    export PINENTRY_USER_DATA="USE_CURSES=1"
 fi
 
+export PINENTRY_USER_DATA="USE_CURSES=1"
 
 export EDITOR=vi
 #alias gephi=~/gephi/bin/gephi
