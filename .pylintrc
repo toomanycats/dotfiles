@@ -23,9 +23,6 @@ load-plugins=
 
 extension-pkg-whitelist=numpy,pandas
 
-# avoid E1101
-# http://stackoverflow.com/questions/33961756/disabling-pylint-no-member-e1101-error-for-specific-libraries
-generated-members=pandas.*
 
 [MESSAGES CONTROL]
 
@@ -130,7 +127,7 @@ ignore-mixin-members=yes
 
 # List of classes names for which member attributes should not be checked
 # (useful for classes with attributes dynamically set).
-ignored-classes=SQLObject
+ignored-classes=SQLObject,pandas.DataFrame
 
 # When zope mode is activated, add a predefined set of Zope acquired attributes
 # to generated-members.
@@ -140,9 +137,9 @@ zope=no
 # system, and so shouldn't trigger E0201 when accessed. Python regular
 # expressions are accepted.
 
-# includes work around Pandas error for "generator" error
-generated-members=REQUEST,acl_users,aq_parent,pandas.*
+generated-members=REQUEST,acl_users,aq_parent
 
+ignored-modules=pandas
 
 [BASIC]
 
