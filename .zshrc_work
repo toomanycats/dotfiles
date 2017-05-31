@@ -90,6 +90,11 @@ export PATH=/usr/sbin:/usr/bin:/sbin:/bin:$PATH
 export PATH=/netopt/rhel7/versions/cmtk/bin:$PATH
 export PATH=/netopt/dicom/bin:$PATH
 export PATH=/netopt/rhel7/fsl/bin:$PATH
+#
+# ANTS
+export ANTSPATH=/working/sdl_analysis/software/ANTs/antsbin/bin
+export PATH=$ANTSPATH:$PATH
+export ITK_GLOBAL_DEFAULT_NUMBER_OF_THREADS=4
 
 #export PATH=~/.cargo/bin:$PATH
 # custom pipeline command line prog
