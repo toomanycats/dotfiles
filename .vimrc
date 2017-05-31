@@ -97,6 +97,9 @@ nnoremap <leader>sc :SyntasticCheck <enter>
 " remove trailing white space after :w
 autocmd BufWritePre * :%s/\s\+$//e
 
+" search is case-insensitive by default
+set ignorecase
+
 " comment out  Python break points
 nnoremap <leader>c :g/\s*\(#\)\@<!pdb.set_trace()/normal I#<enter>
 
