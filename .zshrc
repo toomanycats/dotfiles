@@ -24,18 +24,19 @@ alias xclip="xclip -selection clipboard"
 # typically use ipython 5 in py3
 alias ipython="ipython --profile ipython5"
 # moved most data to spinning iron drive
-export NLTK_DATA="/media/daniel/Misc/nltk_data"
+export NLTK_DATA="/mnt/Misc/nltk_data"
 
 export PYTHONPATH=$PYTHONPATH:/home/daniel/git/Python2.7/DataScience
 export PYTHONPATH=/home/daniel/git/Python2.7/MRI/Modules:$PYTHONPATH
 export PATH="/home/daniel/anaconda/bin:/home/daniel/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/daniel/FSL:/home/daniel/FSL:/usr/lib/cmtk/bin/:/opt/afni_bin/linux_xorg7_64"
 export PATH=~/spark-1.5.2-bin-hadoop2.6/bin:~/spark-1.5.2-bin-hadoop2.6/sbin:$PATH
+
 # Rust
 export PATH=~/.cargo/bin:$PATH
+
 ### Ruby ###
-export PATH=$HOME/.rbenv/bin:$PATH
-export PATH=$HOME/.rbenv/plugins/ruby-build/bin:$PATH
-eval "$(rbenv init -)"
+source "$HOME/.rvm/scripts/rvm" 
+export PATH=~/.gem/ruby/2.4.0/bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
 # to improve vi key bindings in the terminal
@@ -57,3 +58,6 @@ bindkey "^r" history-incremental-search-backward
 
 # shell options
 setopt extended_glob
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
