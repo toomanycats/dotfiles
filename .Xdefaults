@@ -1,9 +1,12 @@
+! u r x v t
 xterm*Background: black
 xterm*Foreground: green
 xterm*CursorColor: LightBlue
-xterm*Geometry: 100x100
 
-
-urxvt*font:xft:Monaco:size=10
+urxvt*font:xft:Monaco:size=12
 Xft.dpi: 99
 
+URxvt*geometry:         112x90
+URxvt*scrollBar:        false
+URxvt*scrollBar_right:  true
+URxvt*scrollColor:        #000000
