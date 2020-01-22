@@ -135,3 +135,7 @@ let gundo_prefer_python3 = 1
 
 " JEDI
 let g:jedi#completions_enabled = 0
+
+
+" temp turn off search highlighting
+remap <esc> :noh<return><esc>
