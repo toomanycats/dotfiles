@@ -1,2 +1,9 @@
 set editing-mode vi
 set keymap vi
+
+if [ $0 = 'bash' ]; then
+    bind TAB:menu-complete
+    set completion-ignore-case on
+    set show-all-if-ambiguous on
+    set menu-complete-display-prefix on
+fi
