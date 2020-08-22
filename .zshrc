@@ -107,4 +107,5 @@ export PATH=/usr/local/go/bin:${PATH}:${GOPATH}/bin
 
 
 # hack my LS_COLORS since I cannot seem to change it properly
-export LS_COLORS=$(echo $LS_COLORS | sed 's/di=38;5;27/di=36;4;27/1')
+#export LS_COLORS=$(echo $LS_COLORS | sed 's/di=38;5;27/di=36;4;27/1')
+export LS_COLORS=${LS_COLORS/di=38;5;27/di=36;4;27}
