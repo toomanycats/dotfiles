@@ -4,7 +4,7 @@ import matplotlib as mpl
 mpl.use('Agg')
 import matplotlib.pyplot as plt
 import re
-import nipy
+#import nipy
 
 imports = ["pandas as pd", "numpy as np", "matplotlib.pyplot as plt", "re", "nipy"]
 
